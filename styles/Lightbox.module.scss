@@ -1,0 +1,54 @@
+@import './_constant.scss';
+
+.lightbox__container {
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  backdrop-filter: blur(2px);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 125px 0 0;
+
+  .window {
+    border: 1px solid $color4;
+    border-radius: 4px;
+    background: $color3;
+    display: grid;
+    grid-template-columns: 60px 1fr 60px;
+    grid-template-areas: '. a b';
+
+    .content {
+      display: flex;
+    }
+
+    > :nth-child(1) {
+      grid-area: a;
+    }
+
+    > :nth-child(2) {
+      grid-area: b;
+    }
+
+    &.large {
+      height: 940px;
+      width: 976px;
+    }
+
+    &.small {
+      height: 322px;
+      width: 686px;
+    }
+
+    .close__container {
+      cursor: pointer;
+      font-size: 2em;
+      color: $color5;
+      margin: 26px 26px 0 0;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+@import './_constant.scss';
+
+$lineHeight: 20px;
+$fontWeight: 500;
+$fontSize: 16px;
+
+.drop__down__item {
+  cursor: pointer;
+  width: auto;
+  padding: 5px 10px;
+  color: $color5;
+  @include fontBase($fontWeight, $lineHeight, $fontSize);
+
+  &:hover {
+    background: $color1;
+  }
+}

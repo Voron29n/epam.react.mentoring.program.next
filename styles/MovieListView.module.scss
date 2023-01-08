@@ -1,0 +1,58 @@
+@import './_constant.scss';
+
+$marginMovieCount: 0 0 25px;
+$marginCount: 0 10px 0 0;
+
+$movieListBottomMargin: 50px;
+$loadingHeight: 600px;
+
+$lineHeightCount: 24px;
+$lineHeightCountText: 20px;
+$fontWeightCount: 600;
+$fontWeightCountText: 400;
+$fontSizeCount: 20px;
+$fontSizeCountText: 18px;
+
+.movie__view {
+  width: $containerWitch;
+  @include container();
+  flex-direction: column;
+  background: $color3;
+
+  &.movie__loading {
+    height: $loadingHeight;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .movie__count {
+    display: flex;
+    align-items: center;
+
+    margin: $marginMovieCount;
+    color: $color5;
+    @include fontBase(
+      $fontWeightCountText,
+      $lineHeightCountText,
+      $fontSizeCountText
+    );
+
+    span {
+      margin: $marginCount;
+      @include fontBase($fontWeightCount, $lineHeightCount, $fontSizeCount);
+    }
+  }
+
+  .movie__list {
+    width: inherit;
+    grid-template-columns: repeat(3, 325px);
+    display: grid;
+    row-gap: $movieListBottomMargin;
+    margin: 0 0 $movieListBottomMargin;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    justify-items: center;
+  }
+}

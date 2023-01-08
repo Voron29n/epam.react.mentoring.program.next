@@ -1,0 +1,15 @@
+@import './_constant.scss';
+
+$lineHeight: 20px;
+$fontWeight: 500;
+$fontSize: 16px;
+
+.genre__item {
+  color: $color5;
+  @include fontBase($fontWeight, $lineHeight, $fontSize);
+  cursor: pointer;
+
+  &.genre__active {
+    color: $color1;
+  }
+}

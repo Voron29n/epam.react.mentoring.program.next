@@ -1,0 +1,56 @@
+@import './_constant.scss';
+
+$lineHeight: 20px;
+$fontWeight: 400;
+$fontSize: 16px;
+$letterSpacing: 0.888889px;
+$fontWeightItem: 500;
+
+.sort__bar__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 270px;
+
+  .label {
+    color: $color5;
+    @include fontBase($fontWeight, $lineHeight, $fontSize, $letterSpacing);
+    text-transform: uppercase;
+
+    mix-blend-mode: normal;
+    opacity: 0.6;
+  }
+
+  .active__item {
+    width: 140px;
+    color: $color5;
+    @include fontBase($fontWeightItem, $lineHeight, $fontSize);
+  }
+
+  .select {
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+
+    .select__img {
+      margin-left: 13px;
+      width: 12px;
+      height: 7px;
+
+      border-radius: 1px;
+
+      &.img__flip {
+        transform: scaleY(-1);
+      }
+    }
+  }
+
+  .sort__bar__drop-down {
+    width: 150px;
+    top: 30px;
+  }
+}

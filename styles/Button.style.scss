@@ -1,0 +1,11 @@
+@import './_constant.scss';
+
+$fontWeightButtonText: 600;
+
+.common__button {
+  text-align: center;
+  border-radius: 4px;
+  cursor: pointer;
+
+  @include fontBase($fontWeightLowText, $lineHeightLowText, $fontSizeLowText);
+}

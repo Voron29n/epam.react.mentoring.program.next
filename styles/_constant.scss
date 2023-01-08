@@ -1,0 +1,49 @@
+$containerWitch: 1080px;
+$containerLRPadding: 60px;
+
+$lineHeightHeadline: 49px;
+$fontWeightHeadline: 300;
+$fontSizeHeadline: 40px;
+$letterSpacingHeadline: 1px;
+
+$lineHeightLowText: 24px;
+$fontWeightLowText: 400;
+$fontSizeLowText: 20px;
+
+$lineHeightGenre: 17px;
+$fontSizeGenre: 14px;
+$fontWeightGenre: 500;
+
+$color1: #f65261;
+$color2: #e4e4e4;
+$color3: #232323;
+$color4: #555555;
+$color5: #ffffff;
+$color6: #888888;
+
+@mixin container(
+  $topPadding: 0,
+  $rightPadding: 60px,
+  $bottomPadding: 0,
+  $leftPadding: 60px
+) {
+  padding: $topPadding $rightPadding $bottomPadding $leftPadding;
+}
+
+@mixin fontBase($fontWeight, $lineHeight, $fontSize, $letterSpacing: 0) {
+  font-family: 'Montserrat', serif;
+  font-style: normal;
+  font-weight: $fontWeight;
+  line-height: $lineHeight;
+  font-size: $fontSize;
+  letter-spacing: $letterSpacing;
+}
+
+:export {
+  color1: $color1;
+  color2: $color2;
+  color3: $color3;
+  color4: $color4;
+  color5: $color5;
+  color6: $color6;
+}

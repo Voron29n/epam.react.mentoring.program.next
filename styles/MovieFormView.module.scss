@@ -1,0 +1,85 @@
+@import './_constant.scss';
+
+$confirmTopPadding: 63px;
+$confirmRightPadding: 35px;
+$confirmLeftPadding: 20px;
+$confirmBottomPadding: 35px;
+
+$fontWeightButton: 500;
+$lineHeightButton: 24px;
+$fontSizeButton: 20px;
+$letterSpacingButton: 0;
+
+$movieFormGap: 30px;
+
+.movie__form__container {
+  @include container(63px, 0, 70px, 0);
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .headline {
+    text-align: left;
+    color: $color5;
+    @include fontBase(
+      $fontWeightHeadline,
+      $lineHeightHeadline,
+      $fontSizeHeadline,
+      $letterSpacingHeadline
+    );
+  }
+
+  .confirm__text {
+    text-align: left;
+    color: $color5;
+    @include fontBase($fontWeightLowText, $lineHeightLowText, $fontSizeLowText);
+  }
+
+  .movie__data {
+    display: grid;
+    gap: $movieFormGap;
+
+    .movie__small__inputs {
+      display: grid;
+      grid-template-columns: 530px 300px;
+      gap: $movieFormGap;
+    }
+
+    .movie__large__inputs {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  }
+
+  .movie__form__buttons {
+    display: flex;
+    justify-content: right;
+
+    .form__movie__button {
+      height: 57px;
+      width: 233px;
+
+      border: 1.5px solid $color1;
+      border-radius: 4px;
+      background: $color3;
+      @include fontBase(
+        $fontWeightButton,
+        $lineHeightButton,
+        $fontSizeButton,
+        $letterSpacingButton
+      );
+
+      &.reset__button {
+        color: $color1;
+        margin-right: 13px;
+      }
+
+      &.submit__button {
+        background: $color1;
+        color: $color5;
+      }
+    }
+  }
+}

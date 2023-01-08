@@ -1,0 +1,36 @@
+@import './_constant.scss';
+
+$congratulationsIconSize: 66px;
+$congratulationsTextWidth: 300px;
+
+.congratulations__container {
+  @include container(42px, 0, 57px, 0);
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  .congratulations_icon {
+    width: $congratulationsIconSize;
+    height: $congratulationsIconSize;
+  }
+
+  .headline {
+    text-align: center;
+    color: $color5;
+    @include fontBase(
+      $fontWeightHeadline,
+      $lineHeightHeadline,
+      $fontSizeHeadline,
+      $letterSpacingHeadline
+    );
+  }
+
+  .text {
+    width: $congratulationsTextWidth;
+    text-align: center;
+    color: $color5;
+    @include fontBase($fontWeightLowText, $lineHeightLowText, $fontSizeLowText);
+  }
+}

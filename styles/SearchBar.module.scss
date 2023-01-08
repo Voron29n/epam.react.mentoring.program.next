@@ -1,0 +1,57 @@
+@import './_constant.scss';
+
+$height: 49px;
+
+.search__container {
+  padding: 0 $containerLRPadding;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: 'a .' 'b c';
+  grid-template-rows: 90px 1fr;
+
+  .headline {
+    display: flex;
+    height: $height;
+    color: $color5;
+    @include fontBase(
+      $fontWeightHeadline,
+      $lineHeightHeadline,
+      $fontSizeHeadline,
+      $letterSpacingHeadline
+    );
+  }
+
+  .input {
+    margin-right: 14px;
+    padding-left: 19px;
+    height: $height;
+    width: 710px;
+    background: rgba(50, 50, 50, 0.8);
+    mix-blend-mode: normal;
+    opacity: 0.7;
+    border-radius: 4px;
+
+    color: $color5;
+    @include fontBase($fontWeightLowText, $lineHeightLowText, $fontSizeLowText);
+  }
+
+  .search__button {
+    height: 57px;
+    width: 233px;
+    background: $color1;
+    color: $color5;
+  }
+
+  :nth-child(1) {
+    grid-area: a;
+  }
+
+  :nth-child(2) {
+    grid-area: b;
+  }
+
+  :nth-child(3) {
+    grid-area: c;
+  }
+}

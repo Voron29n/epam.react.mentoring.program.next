@@ -1,0 +1,50 @@
+@import './_constant.scss';
+@import './Button.style.scss';
+@import './Confirm.module.scss';
+@import './Congratulations.module.scss';
+@import './DropDown.module.scss';
+@import './DropDownItem.module.scss';
+@import './FilterBar.module.scss';
+@import './Footer.module.scss';
+@import './GenreBar.module.scss';
+@import './GenreBarItem.module.scss';
+@import './Header.module.scss';
+@import './Lightbox.module.scss';
+@import './Logo.module.scss';
+@import './MovieDetail.module.scss';
+@import './MovieFormView.module.scss';
+@import './MovieInputView.module.scss';
+@import './MovieListView.module.scss';
+@import './MovieView.module.scss';
+@import './SearchBar.module.scss';
+@import './SortBar.module.scss';
+@import './Spinner.module.scss';
+@import './UnknownPage.module.scss';
+
+body {
+  background: #888888;
+
+  #root {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 1200px;
+    margin: auto;
+
+    .upper__text {
+      text-transform: uppercase;
+    }
+
+    ul {
+      padding: 0;
+      margin: 0;
+    }
+
+    .add__button {
+      height: 46px;
+      width: 176px;
+      background: $color4;
+      color: $color1;
+    }
+  }
+}

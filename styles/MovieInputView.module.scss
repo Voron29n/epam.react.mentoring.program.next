@@ -1,0 +1,47 @@
+@import './_constant.scss';
+
+$lineHeightLabel: 20px;
+$fontWeightLabel: 600;
+$fontSizeLabel: 16px;
+$letterSpacingLabel: 1px;
+
+$movieInputContainerHeight: 80px;
+
+$defaultInputHeight: 54px;
+$overviewInputHeight: 190px;
+
+.movie__input__container {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: $movieInputContainerHeight;
+
+  > .label {
+    color: $color1;
+    margin-bottom: 13px;
+    @include fontBase(
+      $fontWeightLabel,
+      $lineHeightLabel,
+      $fontSizeLabel,
+      $letterSpacingLabel
+    );
+  }
+
+  .MuiInputBase-root.MuiOutlinedInput-root {
+    color: $color5;
+    background: $color4;
+    height: 54px;
+    @include fontBase($fontWeightLowText, $lineHeightLowText, $fontSizeLowText);
+  }
+
+  &.overview {
+    height: calc(
+      #{$movieInputContainerHeight} - #{$defaultInputHeight} + #{$overviewInputHeight}
+    );
+
+    .MuiInputBase-root.MuiOutlinedInput-root {
+      height: $overviewInputHeight;
+    }
+  }
+}

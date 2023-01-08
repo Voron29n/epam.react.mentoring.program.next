@@ -1,0 +1,47 @@
+@import './_constant.scss';
+
+$topPadding: 20px;
+$height: 396px;
+$movieDetailHeight: 610px;
+$searchIconSize: 30px;
+
+.header__container {
+  width: $containerWitch;
+  height: $height;
+  margin: 20px 0 10px;
+  @include container($topPadding);
+  background: #000000;
+
+  display: grid;
+  grid-template-columns: 180px 1fr 180px;
+  grid-template-areas: 'a . b' 'c c c';
+  grid-template-rows: 80px 1fr;
+
+  &.movie__detail {
+    height: $movieDetailHeight;
+  }
+
+  .search__icon {
+    display: flex;
+    justify-content: flex-end;
+
+    > svg {
+      transform: scale(-1, 1);
+      font-size: 2em;
+      color: $color1;
+      cursor: pointer;
+    }
+  }
+
+  :nth-child(1) {
+    grid-area: a;
+  }
+
+  :nth-child(2) {
+    grid-area: b;
+  }
+
+  :nth-child(3) {
+    grid-area: c;
+  }
+}

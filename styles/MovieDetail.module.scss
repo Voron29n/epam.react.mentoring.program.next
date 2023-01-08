@@ -1,0 +1,105 @@
+@import './_constant.scss';
+
+$ratingSize: 60px;
+$genreSize: 18px;
+$overviewSize: 300px;
+
+$infoMarginItems: 30px;
+
+$lineHeightTimeData: 29px;
+$fontSizeTimeData: 24px;
+$fontWeightTimeData: 300;
+
+$timeDataMargin: 50px;
+
+.movie__detail__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  .poster__img {
+    width: 325px;
+    height: 485px;
+  }
+
+  .info {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin: 0 0 0 60px;
+    width: 100%;
+
+    .main__data {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+
+      .title {
+        color: $color5;
+        margin-right: 25px;
+        @include fontBase(
+          $fontWeightHeadline,
+          $lineHeightHeadline,
+          $fontSizeHeadline,
+          $letterSpacingHeadline
+        );
+      }
+
+      .rating__container {
+        width: 15%;
+
+        .rating {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: $ratingSize;
+          height: $ratingSize;
+
+          color: $color5;
+          @include fontBase(
+            $fontWeightLowText,
+            $lineHeightLowText,
+            $fontSizeLowText
+          );
+          border: 1px solid $color5;
+          border-radius: 50%;
+        }
+      }
+    }
+
+    .genre {
+      color: $color5;
+      margin-bottom: $infoMarginItems;
+      height: $genreSize;
+      @include fontBase($fontWeightGenre, $lineHeightGenre, $fontSizeGenre);
+      mix-blend-mode: normal;
+      opacity: 0.5;
+    }
+
+    .time__data {
+      display: flex;
+      align-items: center;
+      color: $color1;
+      margin-bottom: $infoMarginItems;
+      @include fontBase(
+        $fontWeightTimeData,
+        $lineHeightTimeData,
+        $fontSizeTimeData
+      );
+
+      .release {
+        margin-right: 50px;
+      }
+    }
+
+    .overview {
+      color: $color5;
+      opacity: 0.5;
+      @include fontBase(
+        $fontWeightLowText,
+        $lineHeightLowText,
+        $fontSizeLowText
+      );
+    }
+  }
+}

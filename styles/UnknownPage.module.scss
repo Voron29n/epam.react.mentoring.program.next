@@ -1,0 +1,15 @@
+@import './_constant.scss';
+
+$lineHeight: 40px;
+$fontWeight: 200;
+$fontSize: 40px;
+
+.unknown__page {
+  width: 100vw;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $color5;
+  @include fontBase($fontWeight, $lineHeight, $fontSize);
+}

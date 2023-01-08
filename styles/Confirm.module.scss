@@ -1,0 +1,38 @@
+@import './_constant.scss';
+
+.confirm__form__container {
+  @include container(63px, 0, 70px, 0);
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .headline {
+    text-align: left;
+    color: $color5;
+    @include fontBase(
+      $fontWeightHeadline,
+      $lineHeightHeadline,
+      $fontSizeHeadline,
+      $letterSpacingHeadline
+    );
+  }
+
+  .confirm__text {
+    text-align: left;
+    color: $color5;
+    @include fontBase($fontWeightLowText, $lineHeightLowText, $fontSizeLowText);
+  }
+
+  .confirm__button__container {
+    display: flex;
+    justify-content: right;
+
+    .confirm__button {
+      height: 57px;
+      width: 233px;
+      background: $color1;
+      color: $color5;
+    }
+  }
+}
